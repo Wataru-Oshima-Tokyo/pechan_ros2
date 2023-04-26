@@ -9,16 +9,11 @@ def generate_launch_description():
 
     box_bot_1_config = os.path.join(get_package_share_directory(
         'pechan_localization_server'), 'config', 'box_bot_1_amcl_config_turtleworld.yaml')
-    box_bot_2_config = os.path.join(get_package_share_directory(
-        'pechan_localization_server'), 'config', 'box_bot_2_amcl_config_turtleworld.yaml')
+    
 
-    map_file = os.path.join(get_package_share_directory(
-        'pechan_cartographer_slam'), 'config', 'turtleworld.yaml')
-
-    rviz_config_dir = os.path.join(
-        get_package_share_directory('pechan_cartographer_slam'),
-        'rviz',
-        'nav2_default_view.rviz')
+    map_file = os.path.join(get_package_share_directory('sim_worlds'),
+            'maps',
+            'sh.yaml')
 
     return LaunchDescription([
         Node(
@@ -42,15 +37,6 @@ def generate_launch_description():
         ),
 
         Node(
-            namespace='box_bot_2',
-            package='nav2_amcl',
-            executable='amcl',
-            name='amcl',
-            output='screen',
-            parameters=[box_bot_2_config]
-        ),
-
-        Node(
             package='nav2_lifecycle_manager',
             executable='lifecycle_manager',
             name='lifecycle_manager_localization',
@@ -58,14 +44,7 @@ def generate_launch_description():
             parameters=[{'use_sim_time': True},
                         {'autostart': True},
                         {'bond_timeout': 0.0},
-                        {'node_names': ['map_server', 'box_bot_1/amcl', 'box_bot_2/amcl']}]
+                        {'node_names': ['map_server', 'box_bot_1/amcl']}]
         ),
 
-        # Node(
-        #     package='rviz2',
-        #     executable='rviz2',
-        #     name='rviz2',
-        #     arguments=['-d', rviz_config_dir],
-        #     parameters=[{'use_sim_time': True}],
-        #     output='screen')
     ])

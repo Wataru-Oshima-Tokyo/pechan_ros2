@@ -1,9 +1,9 @@
 <?xml version='1.0' ?>
 
 <launch>
-    <include file="$(find-pkg-share pechan_localization_server)/launch/localization_1_2_turtleworld.launch.py"/>
+    <include file="$(find-pkg-share pechan_localization_server)/launch/localization_1_sh.launch.py"/>
     
-    <include file="$(find-pkg-share pechan_planner_server)/launch/pathplanner.launch.py"/>
+    <include file="$(find-pkg-share pechan_planner_server)/launch/one_box_bot_pathplanner.launch.py"/>
     
     <!-- <include file="$(find-pkg-share main_navigation)/launch/start_navigation_rviz.launch.xml"/>
      -->

@@ -13,7 +13,8 @@
 
     <!-- Wheels -->
 	<xacro:property name="wheel_radius" value="${base_box_z / 4.0}"/>
-    <xacro:property name="wheel_width" value="0.001"/>
+    <!-- <xacro:property name="wheel_width" value="0.001"/> -->
+    <xacro:property name="wheel_width" value="0.005"/>
     <xacro:property name="wheel_increment" value="0.010"/>
     <xacro:property name="mu1_wheel" value="0.5"/>
     <xacro:property name="mu2_wheel" value="0.5"/>

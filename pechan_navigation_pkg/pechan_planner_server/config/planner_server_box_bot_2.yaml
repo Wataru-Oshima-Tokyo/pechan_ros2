@@ -15,7 +15,7 @@ box_bot_2/global_costmap:
       update_frequency: 1.0
       publish_frequency: 1.0
       global_frame: map
-      map_topic: /map
+      map_topic: "/map"
       robot_base_frame: box_bot_2/chassis
       use_sim_time: True
       robot_radius: 0.181

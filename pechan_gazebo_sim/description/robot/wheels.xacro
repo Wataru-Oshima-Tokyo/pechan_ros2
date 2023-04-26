@@ -2,7 +2,7 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
     <!-- Wheels-->
-    <xacro:macro  name="link_wheel" params="name r l incr">
+  <xacro:macro  name="link_wheel" params="name r l incr">
       <link name="${name}">
           <inertial>
             <mass value="0.2"/>
@@ -34,6 +34,5 @@
       <joint_properties damping="1.0" friction="1.0"/>
     </joint>
   </xacro:macro >
-
 
 </robot>

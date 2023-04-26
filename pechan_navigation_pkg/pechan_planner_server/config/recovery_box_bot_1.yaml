@@ -11,8 +11,8 @@ box_bot_1/behavior_server:
       plugin: "nav2_behaviors/BackUp"
     wait:
       plugin: "nav2_behaviors/Wait"
-    global_frame: box_bot_1/odom
-    robot_base_frame: box_bot_1/chassis
+    global_frame: "box_bot_1/odom"
+    robot_base_frame: "box_bot_1/chassis"
     transform_timeout: 0.5
     use_sim_time: True
     simulate_ahead_time: 2.0

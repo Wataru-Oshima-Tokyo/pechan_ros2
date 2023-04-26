@@ -10,7 +10,7 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 def generate_launch_description():
     pkg_gazebo_ros = get_package_share_directory('gazebo_ros')
     world = os.path.join(
-        get_package_share_directory('pechan_gazebo_sim'),
+        get_package_share_directory('sim_worlds'),
         'worlds',
         'turtlebot3_world.world'
     )

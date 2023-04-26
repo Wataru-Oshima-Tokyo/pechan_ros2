@@ -1,0 +1,16 @@
+<?xml version='1.0' ?>
+<launch>
+
+  <!-- Launches World now independently form spawning robot -->
+  <!-- <include file="$(find-pkg-share pechan_gazebo_sim)/launch/start_world_turtleworld_empty.launch.py"/> -->
+  <include file="$(find-pkg-share sim_worlds)/launch/map_sh.launch.py"/> 
+
+  <!-- launches the basic turtlebot3 world with multiple basic turtlebot -->
+  <include file="$(find-pkg-share pechan_gazebo_sim)/launch/box_bot.launch.py">
+    <arg name="robot_name" value="box_bot_1"/>
+    <arg name="x_spawn" value="15.0"/>
+    <arg name="y_spawn" value="10.0"/>
+  </include>
+
+    
+</launch>

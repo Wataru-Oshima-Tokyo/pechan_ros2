@@ -41,8 +41,8 @@ box_bot_2/amcl:
     map_topic: "/map"
     set_initial_pose: true
     initial_pose:
-      x: 1.0
-      y: 0.5
+      x: 8.0
+      y: 5.0
       z: 0.0
       a: -0.0208304
 

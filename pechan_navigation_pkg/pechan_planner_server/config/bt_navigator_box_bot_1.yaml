@@ -1,9 +1,9 @@
 box_bot_1/bt_navigator:
   ros__parameters:
     use_sim_time: True
-    global_frame: map
-    robot_base_frame: box_bot_1/chassis
-    odom_topic: odom
+    global_frame: "map"
+    robot_base_frame: "box_bot_1/chassis"
+    odom_topic: "odom" #odom
     bt_loop_duration: 10
     default_server_timeout: 20
     default_nav_to_pose_bt_xml: "/home/ubuntu/ros2_ws/src/pechan_ros2/pechan_navigation_pkg/pechan_planner_server/config/box_bot_1_behavior.xml"
